@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      :root {
+        --planet-size: 30px;
+        --orbit-size: 10px;
+        --revolution-speed: 2s;
+      }
+      .solar-system {
+        background-image: url(imagesstar.jpeg);
+
+        height: 600px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+      }
+
+      .blue {
+        height: 70px;
+        width: 70px;
+        background-color: blue;
+        border-radius: 100px;
+        display: flex;
+        position: absolute;
+        transform: rotate();
+        animation: rotation 3s linear infinite;
+        --orbit-size: 200px;
+      }
+
+      .red {
+        height: 50px;
+        width: 50px;
+        background-color: rgb(255, 42, 0);
+        border-radius: 100px;
+        position: absolute;
+        animation: rotation 10s linear infinite;
+        animation-delay: 1s;
+        --orbit-size: 220px;
+      }
+      .green {
+        height: var(--planet-size);
+        width: var(--planet-size);
+        background-color: rgb(8, 245, 63);
+        border-radius: 100px;
+        position: absolute;
+        animation: rotation 4s linear infinite;
+        --orbit-size: 100px;
+      }
+      .yellow {
+        height: 90px;
+        width: 90px;
+        background-color: rgb(226, 237, 13);
+        border-radius: 100px;
+        position: fixed;
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg) translate(var(--orbit-size));
+        }
+        to {
+          transform: rotate(360deg) translate(var(--orbit-size));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="solar-system">
+      <div class="sun">sun</div>
+      <div class="planet mercury"></div>
+      <div class="planet venus"></div>
+      <div class="planet earth"></div>
+      <div class="planet mars"></div>
+      <div class="planet jupiter"></div>
+      <div class="planet saturn"></div>
+      <div class="planet uranus"></div>
+      <div class="planet neptune"></div>
+    </div>
+  </body>
+</html>
