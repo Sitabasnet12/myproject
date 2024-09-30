@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(imagesstar.jpeg);
+        overflow: hidden;
+      }
+
+      .solar-system {
+        position: relative;
+        width: 1000px;
+        height: 1000px;
+      }
+
+      /* Sun */
+
+      .sun {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 50px yellow;
+      }
+
+      /* Orbit Styles for 9 planets */
+      .orbit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.884);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Define orbit sizes for each planet */
+      .orbit1 {
+        width: 150px;
+        height: 150px;
+      }
+      .orbit2 {
+        width: 200px;
+        height: 200px;
+      }
+      .orbit3 {
+        width: 250px;
+        height: 250px;
+      }
+      .orbit4 {
+        width: 300px;
+        height: 300px;
+      }
+      .orbit5 {
+        width: 350px;
+        height: 350px;
+      }
+      .orbit6 {
+        width: 400px;
+        height: 400px;
+      }
+      .orbit7 {
+        width: 450px;
+        height: 450px;
+      }
+      .orbit8 {
+        width: 500px;
+        height: 500px;
+      }
+      .orbit9 {
+        width: 550px;
+        height: 550px;
+      }
+
+      /* Planet Styles */
+      .planet {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0 -50%; /* Planet will rotate around the orbit center */
+      }
+
+      .planet1 {
+        background-color: gray;
+      }
+      .planet2 {
+        background-color: orange;
+      }
+      .planet3 {
+        background-color: blue;
+      }
+      .planet4 {
+        background-color: red;
+      }
+      .planet5 {
+        background-color: brown;
+      }
+      .planet6 {
+        background-color: lightblue;
+      }
+      .planet7 {
+        background-color: cyan;
+      }
+      .planet8 {
+        background-color: green;
+      }
+      .planet9 {
+        background-color: purple;
+      }
+
+      /* Animation for orbit movement */
+      @keyframes orbit {
+        0% {
+          transform: rotate(0deg) translateX(75px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(75px);
+        }
+      }
+
+      @keyframes orbit2 {
+        0% {
+          transform: rotate(0deg) translateX(100px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(100px);
+        }
+      }
+
+      @keyframes orbit3 {
+        0% {
+          transform: rotate(0deg) translateX(125px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(125px);
+        }
+      }
+
+      @keyframes orbit4 {
+        0% {
+          transform: rotate(0deg) translateX(150px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(150px);
+        }
+      }
+
+      @keyframes orbit5 {
+        0% {
+          transform: rotate(0deg) translateX(175px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(175px);
+        }
+      }
+
+      @keyframes orbit6 {
+        0% {
+          transform: rotate(0deg) translateX(200px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(200px);
+        }
+      }
+
+      @keyframes orbit7 {
+        0% {
+          transform: rotate(0deg) translateX(225px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(225px);
+        }
+      }
+
+      @keyframes orbit8 {
+        0% {
+          transform: rotate(0deg) translateX(250px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(250px);
+        }
+      }
+
+      @keyframes orbit9 {
+        0% {
+          transform: rotate(0deg) translateX(275px);
+        }
+        100% {
+          transform: rotate(360deg) translateX(275px);
+        }
+      }
+
+      /* Applying unique speeds for planets */
+      .planet1 {
+        animation: orbit 4s linear infinite;
+      }
+      .planet2 {
+        animation: orbit2 6s linear infinite;
+      }
+      .planet3 {
+        animation: orbit3 8s linear infinite;
+      }
+      .planet4 {
+        animation: orbit4 10s linear infinite;
+      }
+      .planet5 {
+        animation: orbit5 12s linear infinite;
+      }
+      .planet6 {
+        animation: orbit6 14s linear infinite;
+      }
+      .planet7 {
+        animation: orbit7 16s linear infinite;
+      }
+      .planet8 {
+        animation: orbit8 18s linear infinite;
+      }
+      .planet9 {
+        animation: orbit9 20s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="solar-system">
+      <!-- Sun in the center -->
+      <div class="sun"></div>
+
+      <!-- 9 Orbits for the planets -->
+      <div class="orbit orbit1">
+        <div class="planet planet1"></div>
+      </div>
+
+      <div class="orbit orbit2">
+        <div class="planet planet2"></div>
+      </div>
+
+      <div class="orbit orbit3">
+        <div class="planet planet3"></div>
+      </div>
+
+      <div class="orbit orbit4">
+        <div class="planet planet4"></div>
+      </div>
+
+      <div class="orbit orbit5">
+        <div class="planet planet5"></div>
+      </div>
+
+      <div class="orbit orbit6">
+        <div class="planet planet6"></div>
+      </div>
+
+      <div class="orbit orbit7">
+        <div class="planet planet7"></div>
+      </div>
+
+      <div class="orbit orbit8">
+        <div class="planet planet8"></div>
+      </div>
+
+      <div class="orbit orbit9">
+        <div class="planet planet9"></div>
+      </div>
+    </div>
+  </body>
+</html>
